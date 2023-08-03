@@ -1,8 +1,19 @@
 {
-    "rewrites": [{ "source": "/:path*", "destination": "/index.html" }],
-    "hosting": {
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/sw.js",
       "headers": [
-        { "source":"/sw.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}] }
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
       ]
     }
-  }
+  ]
+}
